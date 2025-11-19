@@ -1,0 +1,164 @@
+\documentclass[hidelinks,12pt,oneside,a4paper,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[authordate-trad,backend=biber]{biblatex-chicago}
+\usepackage[]{graphics}
+\usepackage{graphicx}
+\usepackage{todonotes}
+\usepackage{babel}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[framed, numbered]{matlab-prettifier}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{lscape}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{nomencl}
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage[toc,page]{appendix}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{hyperref}
+\usepackage{environ}
+\usepackage{url}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\usepackage{fancyhdr}
+\usepackage[authordate-trad,backend=biber]{biblatex-chicago}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{inconsolata}
+\usepackage{tikz}
+\usepackage[
+    left = \flqq{},% 
+    right = \frqq{},% 
+    leftsub = \flq{},% 
+    rightsub = \frq{} %
+]{dirtytalk}
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[RO]{August Kofoed Brandt, Theis Per Holm \\ Sebastian Cloos Hylander, Emilia Victoria Helsted}
+\fancyhead[RO]{Aldes - Red Scare}
+%\fancyhead[LO]{IT University of Copenhagen}
+\fancyfoot[RO]{\thepage}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[C]{\textbf{\thepage}} % except the center
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\NewEnviron{OUReq}{%
+    \centerline{
+    \scalebox{1.15}{\BODY}
+    }
+}
+
+\DeclareCaptionType{exam}[Example][List of Examples]
+
+
+%til kodeblokke i tests i bilag
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\setlength\parindent{0pt}
+\addbibresource{references.bib}
+\title{Aldes - Red Scare}  
+\date{\today}
+
+\begin{document}
+
+\lstset{
+  language=,
+  mathescape=true,
+  morekeywords={function, while, do, 
+  class, end, return, else, if},
+  keywordstyle=\bfseries, 
+}
+
+\maketitle
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.57]{img/mads.png}
+\end{figure}
+
+\begin{center}
+\begin{table}
+\centering
+\Large
+\begin{tabular}{l|l}
+\hline
+ Theis Per Holm & thph@itu.dk  \\ \hline
+ August Kofoed Brandt & aubr@itu.dk \\ \hline
+ Sebastian Cloos Hylander & sehy@itu.dk \\ \hline
+ Emilia Victoria Helsted & ehel@itu.dk \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+
+\renewcommand*\contentsname{Table of Contents}
+\color{black}
+\newpage
+\tableofcontents
+\newpage
+
+\include{Results/Results}
+\include{Methods/Methods}
+%\include{References/References} - not created but a part of le Thore template
+
+
+
+
+%\include{litteratur}
+%\include{bilag/bilag}
+
+
+
+\end{document}
